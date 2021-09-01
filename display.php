@@ -54,7 +54,7 @@ include 'connect.php';
 
             <td>
                 <button class="btn btn-primary"><a class="text-light" href="update.php">Update</a></button>
-                <button class="btn btn-danger"><a class="text-light" href="delete.php?delteid='.$id.'">Delete</a></button>
+                <button class="btn btn-danger"><a class="text-light" href="delete.php?deleteid='.$id.'">Delete</a></button>
             </td>
           </tr>';
                     }
