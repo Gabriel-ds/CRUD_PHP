@@ -1,9 +1,10 @@
 <?php
-    include 'connect.php';
+include 'connect.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
 
     <title>Document</title>
 </head>
+
 <body>
     <div class="container">
         <button class="btn btn-primary my-5">
@@ -19,60 +21,51 @@
         </button>
 
         <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Sl no</th>
-      <th scope="col">Nome</th>
-      <th scope="col">E-mail</th>
-      <th scope="col">Telefone</th>
-      <th scope="col">Senha</th>
-      <th scope="col">Ação</th>
-    </tr>
-  </thead>
-  <tbody>
+            <thead>
+                <tr>
+                    <th scope="col">Sl no</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Telefone</th>
+                    <th scope="col">Senha</th>
+                    <th scope="col">Ação</th>
+                </tr>
+            </thead>
+            <tbody>
 
 
-  <?php
+                <?php
 
-    $sql="Select * from `crud`";
-    $result = mysqli_query($con,$sql);
-    if($result){
-        while($row = mysqli_fetch_assoc($result)){
-            $id = $row['id'];
-            $name = $row['name'];
-            $email = $row['email'];
-            $mobile = $row['mobile'];
-            $password = $row['password'];
-            echo '<tr>
-            <th scope="row">'.$id.'</th>
-            <td>'.$name.'</td>
-            <td>'.$email.'</td>
-            <td>'.$mobile.'</td>
-            <td>'.$password.'</td>
+                $sql = "Select * from `crud`";
+                $result = mysqli_query($con, $sql);
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $id = $row['id'];
+                        $name = $row['name'];
+                        $email = $row['email'];
+                        $mobile = $row['mobile'];
+                        $password = $row['password'];
+                        echo '<tr>
+            <th scope="row">' . $id . '</th>
+            <td>' . $name . '</td>
+            <td>' . $email . '</td>
+            <td>' . $mobile . '</td>
+            <td>' . $password . '</td>
+
+            <td>
+                <button class="btn btn-primary"><a class="text-light" href="update.php">Update</a></button>
+                <button class="btn btn-danger"><a class="text-light" href="delete.php?delteid='.$id.'">Delete</a></button>
+            </td>
           </tr>';
-        }
-    }
+                    }
+                }
 
-  ?>
-    <!-- <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr> -->
-  </tbody>
-</table>
+                ?>
+
+
+            </tbody>
+        </table>
     </div>
 </body>
+
 </html>
