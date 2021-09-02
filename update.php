@@ -18,8 +18,8 @@
         $sql="update `crud` set id=$id,name='$name',email='$email',mobile='$mobile',password='$password' where id=$id";
         $result=mysqli_query($con,$sql);
         if($result){
-            echo "Update feito com sucesso";
-            //header('location:display.php');
+            //echo "Update feito com sucesso";
+            header('location:display.php');
         } else {
             die(mysqli_error($con));
         }
