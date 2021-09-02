@@ -42,8 +42,7 @@ Este projeto em expecífico exemplifica um sistema de cadastro de usuários.
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Website:**  [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-#### **Backend:**  [PHP](https://www.php.net/)
+#### **Website/Backend:**  [PHP](https://www.php.net/)
 #### **Banco de dados:**  [MySQL](https://www.mysql.com/)
 #### **Estilo:**  [BOOTSTRAP](https://getbootstrap.com/)
 
