@@ -14,13 +14,14 @@ include 'connect.php';
     <title>Document</title>
 </head>
 
-<body>
+<body class="bg-dark">
     <div class="container">
+        <h1 class="text-white bg-dark text-center my-5">CRUD PHP</h1>
         <button class="btn btn-primary my-5">
             <a href="user.php" class="text-light" style="text-decoration: none;">Adicionar usuário</a>
         </button>
 
-        <table class="table">
+        <table class="table table-dark table-hover">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
